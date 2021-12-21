@@ -15,7 +15,7 @@ public class App {
      */
     private static void doOperation(ArrayList<Integer> nums) {
 
-        SimpleNums myNums = new SimpleNums();
+        Nums myNums = new Nums();
 
         // translate into an array
         int[] arr = new int[nums.size()];

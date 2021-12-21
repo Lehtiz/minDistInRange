@@ -3,13 +3,15 @@ package project2;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-class SimpleNumsTest {
+import java.util.ArrayList;
+
+class NumsTest {
 
         int[] testArrayDuplicationAndSorting = { 1, 10, 4, 10 };
         int[] testArraySameDistances = { 1, 3, 5 };
         int[] testArrayManyNumbers = { 13, 125, 42, 7, 84, 31, 45, 75, 62, 24, 111, 18, 173 };
 
-        SimpleNums classUnderTest = new SimpleNums();
+        Nums classUnderTest = new Nums();
 
         @Test
         @DisplayName("numbersInRange equal numbers")
@@ -30,6 +32,16 @@ class SimpleNumsTest {
         public void testNumbersInRangeDescending() {
                 assertEquals(2, classUnderTest.numbersInRange(4, 1),
                                 "Distance calculation between numbers 4, 1 should return 2");
+        }
+
+        @Test
+        @DisplayName("listNumbersInRange ArrayList items match")
+        public void testlistNumbersInRange() {
+                ArrayList<Integer> expected = new ArrayList<Integer>();
+                expected.add(2);
+                expected.add(3);
+                assertTrue(classUnderTest.listNumbersInRange(1, 4).equals(expected),
+                                "List should match test list");
         }
 
         @Test
