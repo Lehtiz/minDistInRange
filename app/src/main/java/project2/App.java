@@ -15,13 +15,13 @@ public class App {
      */
     private static void doOperation(ArrayList<Integer> nums) {
 
-        // SimpleNums myNums = new SimpleNums();
+        SimpleNums myNums = new SimpleNums();
 
         // translate into an array
         int[] arr = new int[nums.size()];
         arr = nums.stream().mapToInt(i -> i).toArray();
 
-        // System.out.println("Smallest distance between elements in array is " + myNums.getMinDistance(arr));
+        System.out.println("Smallest distance between elements in array is " + myNums.getMinDistance(arr));
     }
 
     /**
